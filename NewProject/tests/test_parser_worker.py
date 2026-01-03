@@ -7,8 +7,12 @@ def test_parser_worker_with_local_bytes(tmp_path, monkeypatch):
     p.write_bytes(b"Patient: John Doe\nTotal: $100")
 
     # push job to file queue
+    import os
     from src.queue import ParseQueue
-    q = ParseQueue()
+    qpath = tmp_path / "queue.log"
+    os.environ.setdefault("QUEUE_LOG_PATH", str(qpath))
+    q = ParseQueue(queue_path=str(qpath))
+    q.clear()
     # ensure fallback (no redis)
     q.push({"ingest_id": "test-ingest", "object": str(p)})
 
