@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+.env
+
+# Virtual envs
+.venv/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local build
+dist/
+build/
+
+# secrets
+secrets.json
+.env.local
+
+# docker
+*.log
+
