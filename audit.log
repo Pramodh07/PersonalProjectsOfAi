@@ -1,0 +1,12 @@
+{"timestamp": 1767453345.2479, "claim_id": "test-ingest", "step": "parse:start", "actor": "parser_worker", "payload_summary": "{'object': 'C:\\\\Users\\\\potnu\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-potnu\\\\pytest-0\\\\test_parser_worker_with_local_0\\\\test.pdf'}"}
+{"timestamp": 1767453375.6786482, "claim_id": "test-ingest", "step": "parse:fail", "actor": "parser_worker", "payload_summary": "{'reason': 'missing_object'}"}
+{"timestamp": 1767453451.876758, "claim_id": "test-ingest", "step": "parse:start", "actor": "parser_worker", "payload_summary": "{'object': 'C:\\\\Users\\\\potnu\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-potnu\\\\pytest-1\\\\test_parser_worker_with_local_0\\\\test.pdf'}"}
+{"timestamp": 1767453482.435971, "claim_id": "test-ingest", "step": "parse:parsed", "actor": "parser_worker", "payload_summary": "{'pages': 1}"}
+{"timestamp": 1767453482.4462986, "claim_id": "test-ingest", "step": "vector:upsert", "actor": "parser_worker", "payload_summary": "{'chunks': 1}"}
+{"timestamp": 1767453482.4466686, "claim_id": "test-ingest", "step": "validate:done", "actor": "validator", "payload_summary": "{'results': [{'entity': {'type': 'patient', 'value': 'John Doe', 'page': 1}, 'status': 'pass', 'confidence': 0.98}]}"}
+{"timestamp": 1767453482.4471226, "claim_id": "test-ingest", "step": "adjudicate:done", "actor": "adjudicator", "payload_summary": "{'decision': {'decision': 'accept', 'payout': 100.0}}"}
+{"timestamp": 1767453539.6457977, "claim_id": "test-ingest", "step": "parse:start", "actor": "parser_worker", "payload_summary": "{'object': 'C:\\\\Users\\\\potnu\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-potnu\\\\pytest-2\\\\test_parser_worker_with_local_0\\\\test.pdf'}"}
+{"timestamp": 1767453570.1132565, "claim_id": "test-ingest", "step": "parse:parsed", "actor": "parser_worker", "payload_summary": "{'pages': 1}"}
+{"timestamp": 1767453570.1138332, "claim_id": "test-ingest", "step": "vector:upsert", "actor": "parser_worker", "payload_summary": "{'chunks': 1}"}
+{"timestamp": 1767453570.1143584, "claim_id": "test-ingest", "step": "validate:done", "actor": "validator", "payload_summary": "{'results': [{'entity': {'type': 'patient', 'value': 'John Doe', 'page': 1}, 'status': 'pass', 'confidence': 0.98}]}"}
+{"timestamp": 1767453570.1150043, "claim_id": "test-ingest", "step": "adjudicate:done", "actor": "adjudicator", "payload_summary": "{'decision': {'decision': 'accept', 'payout': 100.0}}"}

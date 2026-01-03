@@ -1,11 +1,10 @@
-[tool.poetry]
+[project]
 name = "insurance-rag"
 version = "0.1.0"
 description = "Multi-agent RAG PoC for insurance claim ingestion and adjudication"
-
-[tool.poetry.dependencies]
-python = "^3.11"
+readme = "README.md"
+requires-python = ">=3.11"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

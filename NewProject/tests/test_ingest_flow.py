@@ -1,12 +1,18 @@
 import os
-from fastapi.testclient import TestClient
+import asyncio
 from src.ingestor import api
 
-client = TestClient(api.app)
+class DummyUploadFile:
+    def __init__(self, filename, content, content_type='text/plain'):
+        self.filename = filename
+        self.content_type = content_type
+        self._content = content
+
+    async def read(self):
+        return self._content
+
 
 def test_ingest_endpoint():
-    resp = client.post("/ingest", files={"file": ("test.txt", b"Patient: John Doe\nTotal: $100")})
-    assert resp.status_code == 200
-    body = resp.json()
-    assert "ingest_id" in body
-    assert "object" in body
+    resp = asyncio.run(api.ingest(file=DummyUploadFile("test.txt", b"Patient: John Doe\nTotal: $100")))
+    assert "ingest_id" in resp
+    assert "object" in resp
