@@ -16,8 +16,8 @@ class ParseQueue:
             self.client = None
         else:
             self.client = redis.from_url(REDIS_URL)
-        # allow overriding path for tests
-        self.queue_path = queue_path or QUEUE_LOG_PATH
+        # allow overriding path for tests; read env var dynamically so tests can set it at runtime
+        self.queue_path = queue_path or os.getenv("QUEUE_LOG_PATH", QUEUE_LOG_PATH)
 
     def push(self, payload: dict):
         if self.client is None:

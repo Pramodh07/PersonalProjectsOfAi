@@ -20,3 +20,13 @@
 {"timestamp": 1767454325.6161613, "claim_id": "test-ingest", "step": "vector:upsert", "actor": "parser_worker", "payload_summary": "{'chunks': 2}"}
 {"timestamp": 1767454325.6165907, "claim_id": "test-ingest", "step": "validate:done", "actor": "validator", "payload_summary": "{'results': [{'entity': {'type': 'patient', 'value': 'John Doe', 'page': 1}, 'status': 'pass', 'confidence': 0.98}]}"}
 {"timestamp": 1767454325.6169662, "claim_id": "test-ingest", "step": "adjudicate:done", "actor": "adjudicator", "payload_summary": "{'decision': {'decision': 'accept', 'payout': 100.0}}"}
+{"timestamp": 1767454462.4297786, "claim_id": "d24dff89-d1e3-40c6-ade4-0a35ec547759", "step": "parse:start", "actor": "parser_worker", "payload_summary": "{'object': 'local_storage\\\\d24dff89-d1e3-40c6-ade4-0a35ec547759_test.txt'}"}
+{"timestamp": 1767454492.8513346, "claim_id": "d24dff89-d1e3-40c6-ade4-0a35ec547759", "step": "parse:parsed", "actor": "parser_worker", "payload_summary": "{'pages': 1}"}
+{"timestamp": 1767454492.8613164, "claim_id": "d24dff89-d1e3-40c6-ade4-0a35ec547759", "step": "vector:upsert", "actor": "parser_worker", "payload_summary": "{'chunks': 3}"}
+{"timestamp": 1767454492.8617196, "claim_id": "d24dff89-d1e3-40c6-ade4-0a35ec547759", "step": "validate:done", "actor": "validator", "payload_summary": "{'results': {'results': [{'entity': {'type': 'patient', 'value': 'John Doe', 'page': 1}, 'status': 'pass', 'confidence': 0.98}], 'signals': []}}"}
+{"timestamp": 1767454492.8622718, "claim_id": "d24dff89-d1e3-40c6-ade4-0a35ec547759", "step": "adjudicate:done", "actor": "adjudicator", "payload_summary": "{'decision': {'decision': 'accept', 'payout': 100.0}}"}
+{"timestamp": 1767454550.7638197, "claim_id": "test-ingest", "step": "parse:start", "actor": "parser_worker", "payload_summary": "{'object': 'C:\\\\Users\\\\potnu\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-potnu\\\\pytest-7\\\\test_parser_worker_with_local_0\\\\test.pdf'}"}
+{"timestamp": 1767454581.2225215, "claim_id": "test-ingest", "step": "parse:parsed", "actor": "parser_worker", "payload_summary": "{'pages': 1}"}
+{"timestamp": 1767454581.2350986, "claim_id": "test-ingest", "step": "vector:upsert", "actor": "parser_worker", "payload_summary": "{'chunks': 4}"}
+{"timestamp": 1767454581.2353537, "claim_id": "test-ingest", "step": "validate:done", "actor": "validator", "payload_summary": "{'results': {'results': [{'entity': {'type': 'patient', 'value': 'John Doe', 'page': 1}, 'status': 'pass', 'confidence': 0.98}], 'signals': []}}"}
+{"timestamp": 1767454581.2355862, "claim_id": "test-ingest", "step": "adjudicate:done", "actor": "adjudicator", "payload_summary": "{'decision': {'decision': 'accept', 'payout': 100.0}}"}

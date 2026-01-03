@@ -10,7 +10,8 @@ def test_parser_worker_with_local_bytes(tmp_path, monkeypatch):
     import os
     from src.queue import ParseQueue
     qpath = tmp_path / "queue.log"
-    os.environ.setdefault("QUEUE_LOG_PATH", str(qpath))
+    # ensure we explicitly set the env var so ParserWorker picks it up
+    os.environ["QUEUE_LOG_PATH"] = str(qpath)
     q = ParseQueue(queue_path=str(qpath))
     q.clear()
     # ensure fallback (no redis)

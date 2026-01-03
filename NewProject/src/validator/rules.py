@@ -1,4 +1,6 @@
-# Simple rule-based validator
+# Simple rule-based validator with pluggable advanced checks
+from .advanced_rules import fraud_signals
+
 
 def validate_entities(entities):
     results = []
@@ -7,4 +9,8 @@ def validate_entities(entities):
             results.append({"entity": e, "status": "pass", "confidence": 0.98})
         else:
             results.append({"entity": e, "status": "review", "confidence": 0.5})
-    return results
+
+    # add fraud signals metadata
+    signals = fraud_signals(entities)
+    return {"results": results, "signals": signals}
+
